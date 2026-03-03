@@ -1,0 +1,240 @@
+body{
+    background-color: antiquewhite;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-container {
+    display: flex;
+    background-color: rgb(163, 109, 79);
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+    rgb(209, 168, 107) 5px 10px 15px;
+}
+
+.button {
+    outline: 0 !important;
+    border: 0 !important;
+    border-radius: 50%;
+    padding: 20px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.home-content {
+    margin-top: 40px;
+    max-width: 600px;
+    background-color: rgba(255,255,255,0.6);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.home-content h1 {
+    margin-bottom: 15px;
+}
+
+.home-content p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.restaurant-list{
+    list-style-type: none;
+}
+
+.menu-item-list{
+    list-style-type: none;
+}
+
+.restaurant-menu-list{
+    list-style-type: none;
+}
+
+form {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+}
+
+form input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #c8a27c;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+
+form input[type="text"]:focus {
+    border-color: #a36d4f;
+    box-shadow: 0 0 5px rgba(163, 109, 79, 0.5);
+}
+
+form select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #c8a27c;
+    font-size: 1rem;
+    outline: none;
+    height: 100px;
+}
+
+
+form label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background-color: #a36d4f;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #8a583d;
+    transform: translateY(-2px);
+}
+
+
+table {
+    margin-top: 30px;
+    border-collapse: collapse;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead {
+    background-color: #a36d4f;
+    color: white;
+}
+
+table th {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e5d5c6;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f7efe7;
+}
+
+table tbody tr:hover {
+    background-color: #efe1d4;
+    transition: 0.2s ease-in-out;
+}
+
+table a {
+    padding: 6px 14px;
+    border-radius: 20px;
+    background-color: #b14b4b;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s ease-in-out;
+}
+
+table a:hover {
+    background-color: #8e3737;
+    transform: translateY(-2px);
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+
+.list {
+    list-style: none;
+    padding: 0;
+    width: 500px;
+    margin: 30px auto;
+}
+
+
+.list li {
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.list span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #444;
+}
+
+.list a {
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+}
+
+.list a:first-of-type {
+    color: #007bff;
+}
+
+.list a:first-of-type:hover {
+    text-decoration: underline;
+}
+
+.list a:last-of-type {
+    color: #dc3545;
+}
+
+.list a:last-of-type:hover {
+    text-decoration: underline;
+}
+

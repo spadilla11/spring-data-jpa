@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+
+<div class="button-container">
+    <a class="button" th:href="@{/}">Home</a>
+    <a class="button" th:href="@{/chefs}">Chefs</a><br>
+    <a class="button" th:href="@{/restaurants}">Restaurants</a><br>
+    <a class="button" th:href="@{/menuItems}">Menu Items</a>
+</div>
+
+<h1 th:text="${restaurant.name}"></h1>
+
+<h2>Menu</h2>
+
+<ul class="restaurant-menu-list">
+    <li th:each="item : ${menuItems}"
+        th:text="${item.name + ' - ' + item.price}">
+    </li>
+</ul>
+
+<a th:href="@{/restaurants}">Back</a>
+
+</body>
+</html>

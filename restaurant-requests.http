@@ -1,0 +1,7 @@
+POST http://localhost:8080/chef
+Content-Type: application/json
+
+{
+  "name": "dani"
+
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+
+<div class="button-container">
+    <a class="button" th:href="@{/}">Home</a>
+    <a class="button" th:href="@{/chefs}">Chefs</a><br>
+    <a class="button" th:href="@{/restaurants}">Restaurants</a><br>
+    <a class="button" th:href="@{/menuItems}">Menu Items</a>
+</div>
+
+<div class="home-content">
+    <h1>👨‍🍳 Restaurant Management System</h1>
+
+    <p>Welcome! This application allows you to manage restaurants, chefs, and menu items all in one place.</p>
+    <p>You can assign chefs to multiple restaurants, organize menu items, and keep everything connected.</p>
+    <p>Use the navigation buttons above to get started.</p>
+</div>
+
+</body>
+</html>
