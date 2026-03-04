@@ -15,9 +15,8 @@ public class Restaurant {
     private String name;
     private String location;
 
-    @OneToMany(mappedBy = "restaurant")
+    @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<MenuItem> menuItems = new ArrayList<>();
-
 
     @ManyToMany
     @JoinTable(
