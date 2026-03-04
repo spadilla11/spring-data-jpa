@@ -17,7 +17,7 @@
 
 <ul class="list">
     <li th:each="menuItem : ${menuItems}">
-        <span th:text="${menuItem.name + ' - ' + menuItem.price}"></span>
+        <span th:text="${menuItem.name + ' - ' + menuItem.price + ' - ' + menuItem.restaurant.name}"></span>
             <a th:href="@{'/menuItems/edit/' + ${menuItem.id}}">Edit</a> |
             <a th:href="@{'/menuItems/delete/' + ${menuItem.id}}"
                onclick="return confirm('Are you sure you want to delete this menu item?');">Delete</a>
@@ -26,6 +26,8 @@
 
 <h2>Add New Menu Item</h2>
 <form th:action="@{/menuItems/add}" th:object="${menuItem}" method="post">
+    <input type="hidden" th:field="*{id}" />
+
     Name: <input type="text" th:field="*{name}" placeholder="Restaurant Name" required />
     Price: <input type="text" th:field="*{price}" placeholder="Price" required />
     <select th:field="*{restaurant.id}">
@@ -35,8 +37,9 @@
                 th:text="${r.name}">
         </option>
     </select>
-    <button type="submit">Add Menu Item</button>
+    <button type="submit">Add Restaurant</button>
 </form>
+
 
 </body>
 </html>

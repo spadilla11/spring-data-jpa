@@ -48,8 +48,8 @@ public class RestaurantController {
         return "restaurant-menu";
     }
 
-    @PostMapping("/add")
-    public String addRestaurant(@ModelAttribute Restaurant restaurant) {
+    @PostMapping("/save")
+    public String saveRestaurant(@ModelAttribute Restaurant restaurant) {
         restaurantRepository.save(restaurant);
         return "redirect:/restaurants";
     }
@@ -58,18 +58,9 @@ public class RestaurantController {
     public String editRestaurant(@PathVariable Long id, Model model) {
         Restaurant restaurant = restaurantRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Restaurant not found with id " + id));
+        model.addAttribute("restaurants", restaurantRepository.findAll());
         model.addAttribute("restaurant", restaurant);
-        return "edit-restaurant"; // create edit-restaurant.html template
-    }
-
-    @PostMapping("/update/{id}")
-    public String updateRestaurant(@PathVariable Long id, @ModelAttribute Restaurant updatedRestaurant) {
-        Restaurant restaurant = restaurantRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Restaurant not found with id " + id));
-        restaurant.setName(updatedRestaurant.getName());
-        restaurant.setLocation(updatedRestaurant.getLocation());
-        restaurantRepository.save(restaurant);
-        return "redirect:/restaurants";
+        return "restaurants";
     }
 
     @GetMapping("/delete/{id}")

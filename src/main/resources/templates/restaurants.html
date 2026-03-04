@@ -27,8 +27,9 @@
     </li>
 </ul>
 
-<h2>Add New Restaurant</h2>
 <form th:action="@{/restaurants/add}" th:object="${restaurant}" method="post">
+    <input type="hidden" th:field="*{id}" />
+
     Name: <input type="text" th:field="*{name}" placeholder="Restaurant Name" required />
     Location: <input type="text" th:field="*{location}" placeholder="Location" required />
     <button type="submit">Add Restaurant</button>

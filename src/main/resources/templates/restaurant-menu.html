@@ -18,13 +18,13 @@
 
 <h2>Menu</h2>
 
-<ul class="restaurant-menu-list">
+<ul class="list">
     <li th:each="item : ${menuItems}"
         th:text="${item.name + ' - ' + item.price}">
     </li>
 </ul>
 
-<a th:href="@{/restaurants}">Back</a>
+<a id="button" th:href="@{/restaurants}">Back</a>
 
 </body>
 </html>

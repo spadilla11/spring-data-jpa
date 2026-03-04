@@ -34,6 +34,20 @@ public class MenuItemController {
         return "redirect:/menuItems";
     }
 
+    @GetMapping("/edit/{id}")
+    public String editMenuItem(@PathVariable Long id, Model model) {
+        model.addAttribute("menuItems", menuItemRepository.findAll());
+        model.addAttribute("menuItem", menuItemRepository.findById(id).orElse(new MenuItem()));
+        model.addAttribute("restaurants", restaurantRepository.findAll());
+        return "menuItems";
+    }
+
+    @PostMapping("/save") 
+    public String save(@ModelAttribute MenuItem menuItem) {
+        menuItemRepository.save(menuItem); //
+        return "redirect:/menuItems";
+    }
+
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable Long id) {
         menuItemRepository.deleteById(id);
