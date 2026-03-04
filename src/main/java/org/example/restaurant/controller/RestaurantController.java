@@ -48,7 +48,7 @@ public class RestaurantController {
         return "restaurant-menu";
     }
 
-    @PostMapping("/save")
+    @PostMapping("/add")
     public String saveRestaurant(@ModelAttribute Restaurant restaurant) {
         restaurantRepository.save(restaurant);
         return "redirect:/restaurants";
